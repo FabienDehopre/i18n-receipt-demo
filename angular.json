@@ -10,6 +10,10 @@
           "es-PR": {
             "translation": "src/locale/messages.es.xlf",
             "baseHref": "es-PR/"
+          },
+          "fr-BE": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": "fr-BE/"
           }
         }
       },
@@ -27,7 +31,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "localize": [
-              "es-PR"
+              "es-PR",
+              "fr-BE"
             ],
             "outputPath": "dist/i18n-receipt-demo",
             "index": "src/index.html",
@@ -63,7 +68,9 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "i18nDuplicateTranslation": "warning",
+              "i18nMissingTranslation": "warning"
             },
             "development": {
               "buildOptimizer": false,
@@ -113,5 +120,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
