@@ -4,5 +4,7 @@
 /node_modules
 /e2e
 /docs
+/dist
+/.angular
 .gitignore
 *.zip
