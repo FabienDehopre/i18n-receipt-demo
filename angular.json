@@ -5,15 +5,15 @@
   "projects": {
     "i18n-receipt-demo": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": "en",
         "locales": {
-          "es-PR": {
+          "es": {
             "translation": "src/locale/messages.es.xlf",
-            "baseHref": "es-PR/"
+            "baseHref": "es/"
           },
-          "fr-BE": {
+          "fr": {
             "translation": "src/locale/messages.fr.xlf",
-            "baseHref": "fr-BE/"
+            "baseHref": "fr/"
           }
         }
       },
@@ -31,8 +31,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "localize": [
-              "es-PR",
-              "fr-BE"
+              "es",
+              "fr"
             ],
             "outputPath": "dist/i18n-receipt-demo",
             "index": "src/index.html",
