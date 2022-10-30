@@ -23,6 +23,10 @@ FROM nginx:alpine AS ngi
 # NOTE: This path may change according to your project's output folder
 COPY --from=build /dist/src/app/dist/i18n-receipt-demo /usr/share/nginx/html
 COPY /nginx.conf  /etc/nginx/conf.d/default.conf
+RUN curl https://ssl-config.mozilla.org/ffdhe4096.txt > /etc/ssl/ffdhe4096.pem
+
+VOLUME /etc/ssl/dehopre.dev
 # Exposing a port, here it means that inside the container
-# the app will be using Port 80 while running
+# the app will be using Port 80 and 443 while running
 EXPOSE 80
+EXPOSE 443
