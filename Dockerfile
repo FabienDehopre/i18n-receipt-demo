@@ -30,3 +30,4 @@ VOLUME /etc/ssl/dehopre.dev
 # the app will be using Port 80 and 443 while running
 EXPOSE 80
 EXPOSE 443
+HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1
